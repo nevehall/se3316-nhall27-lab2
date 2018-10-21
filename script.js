@@ -4,8 +4,8 @@ var lemonQuantity = "24";
 
 function onload(){
 
-    document.getElementById('limeQuantity').innerHTML = limeQuantity; 
-    document.getElementById('lemonQuantity').innerHTML = lemonQuantity; 
+    document.getElementById("limeQuantity").innerHTML = limeQuantity; 
+    document.getElementById("lemonQuantity").innerHTML = lemonQuantity; 
 
 }
 
@@ -26,23 +26,28 @@ function frenchLanguage(){
 function limes(){
     var l = document.getElementById("limesInput").value; //getting the input value
     
-    //alert(l);
+    // alert(limeQuantity);
+    /*if(l.length < 1){
+        limeQuantity -= 1;
+        
+    }*/
    
     //if the user inputs more than what's in stock
-    if (l.length != 0 && (l > limeQuantity)){
+    if (l > limeQuantity){
         alert("You fatso, we only have " + limeQuantity + " limes in stock");
     }
 
+    if(l < limeQuantity){
+        limeQuantity -= l;
+    }
     /*if (l.length < document.getElementById('limeQuantity').innerHTML){
         alert("Easy, we don't have that many limes left!");
     }*/
 
-    //otherwise, the quantity in stock will be updated and the desired amount 
-    //will be added to their cart
-   /* else{
-        limeQuantity = limeQuantity - l;
+  
 
-    }*/
+
+    document.getElementById("limeQuantity").innerHTML = limeQuantity;
 
 }
 
