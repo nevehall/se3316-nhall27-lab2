@@ -1,28 +1,49 @@
 
-window.onload = function(){
-   var limeQuantity = 20;
-   document.getElementById('limeQuantity').innerHTML = limeQuantity; 
+var limeQuantity = "20";
+var lemonQuantity = "24";
 
-   var lemonQuantity = 24;
-   document.getElementById('lemonQuantity').innerHTML = lemonQuantity; 
+function onload(){
+
+    document.getElementById('limeQuantity').innerHTML = limeQuantity; 
+    document.getElementById('lemonQuantity').innerHTML = lemonQuantity; 
 
 }
 
+function englishLanguage(){
+    document.getElementById("fruitShelf").innerHTML = "Fruit Shelf";
+    document.getElementById("limes").innerHTML = "Limes"; 
+    document.getElementById("pickFruit").innerHTML = "Pick a Fruit";
 
-function tooManyFruits(){
-    /*var inputAmount = parseInt(document.getElementById('inputAmount').value);
-    if (limeQuantity.innerHTML < inputAmount.value){
-        alert("You fatso, we only have " + limeQuantity.innerHTML + "limes in stock");
+}
+
+function frenchLanguage(){
+    document.getElementById("limes").innerHTML = "Citrons Verts";
+    document.getElementById("fruitShelf").innerHTML = "Plateau de Fruits";
+    document.getElementById("pickFruit").innerHTML = "Cueillir un Fruit";
+
+}
+
+function limes(){
+    var l = document.getElementById("limesInput").value; //getting the input value
+    
+    //alert(l);
+   
+    //if the user inputs more than what's in stock
+    if (l.length != 0 && (l > limeQuantity)){
+        alert("You fatso, we only have " + limeQuantity + " limes in stock");
+    }
+
+    /*if (l.length < document.getElementById('limeQuantity').innerHTML){
+        alert("Easy, we don't have that many limes left!");
     }*/
 
-    var inputAmount = function(){
-        foo = inputAmount.value;  //assign input value to foo
-        inputAmount.value = '';  //set the inputAmount to empty string
-    }
-    
-    alert("alert" + limeQuantity.innerHTML + inputAmount.value);
-}
+    //otherwise, the quantity in stock will be updated and the desired amount 
+    //will be added to their cart
+   /* else{
+        limeQuantity = limeQuantity - l;
 
-function updateFruitQuantity(){
+    }*/
 
 }
+
+

@@ -6,24 +6,30 @@
         <script type = 'text/javascript' src='script.js'></script>
     </head>
 
-    <body>
-        <h1>Fruit Shelf</h1>
+    <body onload = onload()>
+        <h1 id="fruitShelf">Fruit Shelf</h1>
         <ol id = "fruits"></ol>
-        Pick a fruit:
-        <input type = "text" id = "newfruit">
+        <h2>
+            <button onclick="englishLanguage()">English</button>
+            <button onclick="frenchLanguage()">Francais</button>
+        </h2>
+        <span id="pickFruit">Pick a fruit: </span><input type = "text" id = "newfruit">
+
 
         <!--This is the list of the fruits-->
         <figure>
             <img src="limes.png" height ="200" width="300" />
         </figure> 
-        <h3>Limes</h3>
+        <h3 id="limes">Limes</h3>
         <ul>
             <li>Price: $0.44 each</li>
-            <li>Quantity: </li><p id = "limeQuantity"></p>
+            <li>Quantity: <span id = "limeQuantity" ></span></li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="tooManyFruits()">Add</button> 
-                <input id = "inputAmount" type="number" min="1">
+                <button onclick="limes()">Add</button> 
+                <input type="text" id = "limesInput">
+                <input type="button" value="+" id="add" onclick="addLime()">
+                <input type="button" value="-" id="remove" onclick="removeLime()"
             </li>
         </ul>
 
@@ -33,7 +39,7 @@
         <h3>Lemons</h3>
         <ul>
             <li>Price: $0.38 each</li>
-            <li>Quantity: </li><p id = "lemonQuantity"></p>
+            <li>Quantity: <span id = "lemonQuantity"></span></li>
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -252,9 +258,10 @@
         </ul>
 
 
-
-
         <h1>Basket</h1>
-        <ol id = "basket"></ol>
+        <ol id = "basket">
+            <li></li>
+
+        </ol>
     </body>
 </html>
