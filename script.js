@@ -12,7 +12,7 @@ function onload(){
 function englishLanguage(){
     document.getElementById("fruitShelf").innerHTML = "Fruit Shelf";
     document.getElementById("limes").innerHTML = "Limes"; 
-    document.getElementById("pickFruit").innerHTML = "Pick a Fruit";
+    document.getElementById("pickFruit").innerHTML = "Pick a fruit";
 
 }
 
@@ -25,30 +25,23 @@ function frenchLanguage(){
 
 function limes(){
     var l = document.getElementById("limesInput").value; //getting the input value
-    
-    // alert(limeQuantity);
-    /*if(l.length < 1){
-        limeQuantity -= 1;
-        
-    }*/
    
     //if the user inputs more than what's in stock
     if (l > limeQuantity){
         alert("You fatso, we only have " + limeQuantity + " limes in stock");
     }
 
-    if(l < limeQuantity){
-        limeQuantity -= l;
+    else{
+        limeQuantity -= l
+
     }
-    /*if (l.length < document.getElementById('limeQuantity').innerHTML){
-        alert("Easy, we don't have that many limes left!");
-    }*/
-
-  
-
 
     document.getElementById("limeQuantity").innerHTML = limeQuantity;
 
+}
+
+function addLime(){
+    //if( )
 }
 
 
