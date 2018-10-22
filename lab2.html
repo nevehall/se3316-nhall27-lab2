@@ -3,7 +3,7 @@
     <head>
         <title>SE 3316 - Lab 2</title>
         <meta charset="UTF-8">
-
+        <script type = 'text/javascript' src='script.js'></script>
     </head>
 
     <body onload = onload()>
@@ -34,24 +34,24 @@
         <figure>
             <img src="lemons.png" height=220 width="300"/>
         </figure>
-        <h3>Lemons</h3>
+        <h3 id="lemons">Lemons</h3>
         <ul>
             <li>Price: $0.38 each</li>
             <li>Quantity: <span id = "lemonQuantity"></span></li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="text" min="1">
+                <button onclick="lemons()">Add</button> 
+                <input type="text" id = "lemonInput" min="1">
             </li>
         </ul>
 
         <figure>
             <img src="apple.png" height="220" width="300"/>
         </figure>
-        <h3>Apples</h3>
+        <h3 id="apples">Apples</h3>
         <ul>
             <li>Price: $0.60 each</li>
-            <li>Quantity: 31</li>
+            <li>Quantity: <span id="appleQuantity"></span> </li>
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -62,10 +62,10 @@
         <figure>
             <img src="grapes.png" height="250" width="300"/>
         </figure>
-        <h3>Grapes</h3>
+        <h3 id="grapes">Grapes</h3>
         <ul>
             <li>Price: $2.61 per lb</li>
-            <li>Quantity: 30 lbs</li>
+            <li>Quantity: <span id="grapeQuantity"></span> lbs</li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -76,10 +76,10 @@
         <figure>
             <img src="watermelon.png" height=290 width="300"/>
         </figure>
-        <h3>Watermelon</h3>
+        <h3 id="watermelon">Watermelon</h3>
         <ul>
             <li>Price: $6.00 each</li>
-            <li>Quantity: 8</li>
+            <li>Quantity: <span id="watermelonQuantity"></span></li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -90,10 +90,10 @@
         <figure>
             <img src="strawberries.png" height=240 width="300"/>
         </figure>
-        <h3>Strawberries</h3>
+        <h3 id="strawberries">Strawberries</h3>
         <ul>
             <li>Price: $3.99 per quart</li>
-            <li>Quantity: 12 quarts</li>
+            <li>Quantity: <span id="strawbQuantity"> quarts</span></li>
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -104,10 +104,10 @@
         <figure>
             <img src="raspberries.png" height=230 width="300"/>
         </figure>
-        <h3>Raspberries</h3>
+        <h3 id = "raspberries">Raspberries</h3>
         <ul>
             <li>Price: $2.99 per pint</li>
-            <li>Quantity: 14 pints</li>
+            <li>Quantity: <span id="raspQuantity"></span>pints</li>
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -118,10 +118,10 @@
         <figure>
             <img src="blueberries.png" height=230 width="300"/>
         </figure>
-        <h3>Blueberries</h3>
+        <h3 id ="blueberries">Blueberries</h3>
         <ul>
             <li>Price: $1.80 per pint</li>
-            <li>Quantity: 21 pints</li>
+            <li>Quantity: <span id="bluebQuantity"></span>pints</li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -132,10 +132,10 @@
         <figure>
             <img src="plums.png" height=230 width="300"/>
         </figure>
-        <h3>Plums</h3>
+        <h3 id="plums">Plums</h3>
         <ul>
             <li>Price: $0.68 each</li>
-            <li>Quantity: 26</li>
+            <li>Quantity: <span id="plumQuantity"></span></li>
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -146,10 +146,10 @@
         <figure>
             <img src="pineapple.png" height=310 width="300"/>
         </figure>
-        <h3>Pineapple</h3>
+        <h3 id="pineapple">Pineapple</h3>
         <ul>
             <li>Price: $4.00 each</li>
-            <li>Quantity: 13</li>
+            <li>Quantity: <span id="pineappleQuantity"></span></li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -160,10 +160,10 @@
         <figure>
             <img src="pear.png" height=230 width="300"/>
         </figure>
-        <h3>Pear</h3>
+        <h3 id="pear">Pear</h3>
         <ul>
             <li>Price: $0.54 each</li>
-            <li>Quantity: 28</li>
+            <li>Quantity: <span id ="pearQuantity"></span></li>
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -174,10 +174,10 @@
         <figure>
             <img src="peaches.png" height=290 width="300"/>
         </figure>
-        <h3>Peaches</h3>
+        <h3 id="peaches">Peaches</h3>
         <ul>
             <li>Price: $0.76 each</li>
-            <li>Quantity: 32</li>
+            <li>Quantity: <span id="peachQuantity"></span></li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -188,10 +188,10 @@
         <figure>
             <img src="oranges.png" height=290 width="300"/>
         </figure>
-        <h3>Oranges</h3>
+        <h3 id="oranges">Oranges</h3>
         <ul>
             <li>Price: $0.50 each</li>
-            <li>Quantity: 29</li>
+            <li>Quantity: <span id="orangeQuantity"></span></li>
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -202,10 +202,10 @@
         <figure>
             <img src="mango.png" height=270 width="300"/>
         </figure>
-        <h3>Mango</h3>
+        <h3 id="mango">Mango</h3>
         <ul>
             <li>Price: $0.90 each</li>
-            <li>Quantity: 11</li>
+            <li>Quantity: <span id="mangoQuantity"></span></li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -216,10 +216,10 @@
         <figure>
             <img src="kiwi.png" height=230 width="300"/>
         </figure>
-        <h3>Kiwi</h3>
+        <h3 id ="kiwi">Kiwi</h3>
         <ul>
             <li>Price: $0.40 each</li>
-            <li>Quantity: 19</li>
+            <li>Quantity: <span id="kiwiQuantity"></span></li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -230,7 +230,7 @@
         <figure>
             <img src="grapefruit.png" height=220 width="300"/>
         </figure>
-        <h3>Grapefruit</h3>
+        <h3 id="grapefruit" >Grapefruit</h3>
         <ul>
             <li>Price: $1.16 each</li>
             <li>Quantity: 10</li>
@@ -244,10 +244,10 @@
         <figure>
             <img src="bananas.png" height=230 width="300"/>
         </figure>
-        <h3>Bananas</h3>
+        <h3 id="bananas">Bananas</h3>
         <ul>
             <li>Price: $0.60 per pound</li>
-            <li>Quantity: 42 lbs</li>
+            <li>Quantity: <span id ="bananaQuantity"></span>lbs</li>
             <li>Tax: 13%</li>
             <li>
                 <button onclick="">Add</button> 
@@ -258,7 +258,5 @@
 
         <h1>Basket</h1>
         <ul id = "basket"></ul>
-
-        <script type = 'text/javascript' src='script.js'></script>
     </body>
 </html>
