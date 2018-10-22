@@ -26,7 +26,7 @@
             <li>Quantity: <span id = "limeQuantity" ></span></li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="limes()">Add</button> 
+                <button onclick="limes(); totalPurchase()">Add</button> 
                 <input type="text" id = "limesInput" min="1">
             </li>
         </ul>
@@ -40,7 +40,7 @@
             <li>Quantity: <span id = "lemonQuantity"></span></li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="lemons()">Add</button> 
+                <button onclick="lemons(); totalPurchase()">Add</button> 
                 <input type="text" id = "lemonInput" min="1">
             </li>
         </ul>
@@ -54,8 +54,8 @@
             <li>Quantity: <span id="appleQuantity"></span> </li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
+                <button onclick="apples(); totalPurchase()">Add</button> 
+                <input type="text" id="appleInput" min="1">
             </li>
         </ul>
 
@@ -68,8 +68,8 @@
             <li>Quantity: <span id="grapeQuantity"></span> lbs</li>
             <li>Tax: 13%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1" max="30">lb(s)
+                <button onclick="grapes(); totalPurchase()">Add</button> 
+                <input type="text" id="grapeInput" min="1">lb(s)
             </li>
         </ul>
 
@@ -82,8 +82,8 @@
             <li>Quantity: <span id="watermelonQuantity"></span></li>
             <li>Tax: 13%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
+                <button onclick="watermelons(); totalPurchase()">Add</button> 
+                <input type="text" id="watermelonInput" min="1">
             </li>
         </ul>
 
@@ -96,8 +96,8 @@
             <li>Quantity: <span id="strawbQuantity"> quarts</span></li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">quart(s)
+                <button onclick="strawberries(); totalPurchase()">Add</button> 
+                <input type="number" id="strawbInput" min="1"> quart(s)
             </li>
         </ul>
 
@@ -107,11 +107,11 @@
         <h3 id = "raspberries">Raspberries</h3>
         <ul>
             <li>Price: $2.99 per pint</li>
-            <li>Quantity: <span id="raspQuantity"></span>pints</li>
+            <li>Quantity: <span id="raspQuantity"></span> pints</li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">pint(s)
+                <button onclick="raspberries(); totalPurchase()">Add</button> 
+                <input type="text" id="raspInput" min="1"> pint(s)
             </li>
         </ul>
 
@@ -121,11 +121,11 @@
         <h3 id ="blueberries">Blueberries</h3>
         <ul>
             <li>Price: $1.80 per pint</li>
-            <li>Quantity: <span id="bluebQuantity"></span>pints</li>
+            <li>Quantity: <span id="bluebQuantity"></span> pints</li>
             <li>Tax: 13%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">pint(s)
+                <button onclick="blueberries(); totalPurchase()">Add</button> 
+                <input type="text" id="bluebInput" min="1"> pint(s)
             </li>
         </ul>
 
@@ -138,8 +138,8 @@
             <li>Quantity: <span id="plumQuantity"></span></li>
             <li>Tax: 0%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
+                <button onclick="plums(); totalPurchase() ">Add</button> 
+                <input type="text" id="plumInput" min="1">
             </li>
         </ul>
 
@@ -152,111 +152,23 @@
             <li>Quantity: <span id="pineappleQuantity"></span></li>
             <li>Tax: 13%</li>
             <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
-            </li>
-        </ul>
-
-        <figure>
-            <img src="pear.png" height=230 width="300"/>
-        </figure>
-        <h3 id="pear">Pear</h3>
-        <ul>
-            <li>Price: $0.54 each</li>
-            <li>Quantity: <span id ="pearQuantity"></span></li>
-            <li>Tax: 0%</li>
-            <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
-            </li>
-        </ul>
-
-        <figure>
-            <img src="peaches.png" height=290 width="300"/>
-        </figure>
-        <h3 id="peaches">Peaches</h3>
-        <ul>
-            <li>Price: $0.76 each</li>
-            <li>Quantity: <span id="peachQuantity"></span></li>
-            <li>Tax: 13%</li>
-            <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
-            </li>
-        </ul>
-
-        <figure>
-            <img src="oranges.png" height=290 width="300"/>
-        </figure>
-        <h3 id="oranges">Oranges</h3>
-        <ul>
-            <li>Price: $0.50 each</li>
-            <li>Quantity: <span id="orangeQuantity"></span></li>
-            <li>Tax: 0%</li>
-            <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
-            </li>
-        </ul>
-
-        <figure>
-            <img src="mango.png" height=270 width="300"/>
-        </figure>
-        <h3 id="mango">Mango</h3>
-        <ul>
-            <li>Price: $0.90 each</li>
-            <li>Quantity: <span id="mangoQuantity"></span></li>
-            <li>Tax: 13%</li>
-            <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
-            </li>
-        </ul>
-
-        <figure>
-            <img src="kiwi.png" height=230 width="300"/>
-        </figure>
-        <h3 id ="kiwi">Kiwi</h3>
-        <ul>
-            <li>Price: $0.40 each</li>
-            <li>Quantity: <span id="kiwiQuantity"></span></li>
-            <li>Tax: 13%</li>
-            <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
-            </li>
-        </ul>
-
-        <figure>
-            <img src="grapefruit.png" height=220 width="300"/>
-        </figure>
-        <h3 id="grapefruit" >Grapefruit</h3>
-        <ul>
-            <li>Price: $1.16 each</li>
-            <li>Quantity: 10</li>
-            <li>Tax: 0%</li>
-            <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">
-            </li>
-        </ul>
-
-        <figure>
-            <img src="bananas.png" height=230 width="300"/>
-        </figure>
-        <h3 id="bananas">Bananas</h3>
-        <ul>
-            <li>Price: $0.60 per pound</li>
-            <li>Quantity: <span id ="bananaQuantity"></span>lbs</li>
-            <li>Tax: 13%</li>
-            <li>
-                <button onclick="">Add</button> 
-                <input type="number" min="1">lbs
+                <button onclick="pineapple(); totalPurchase()">Add</button> 
+                <input type="text" id="pinInput" min="1">
             </li>
         </ul>
 
 
         <h1>Basket</h1>
         <ul id = "basket"></ul>
+
+        <h1>Total</h1>
+        <ul>
+            <li>
+                <button onclick = "totalPurchase()">Calculate Total</button>
+            </li>
+            <li>Subtotal: <span id= "subtotal"></span></li>
+            <li>Tax: <span id="tax"></span></li>
+            <li>Total: <span id="total"></span></li>
+        </ul>
     </body>
 </html>
