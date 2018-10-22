@@ -3,7 +3,7 @@
     <head>
         <title>SE 3316 - Lab 2</title>
         <meta charset="UTF-8">
-        <script type = 'text/javascript' src='script.js'></script>
+
     </head>
 
     <body onload = onload()>
@@ -28,8 +28,6 @@
             <li>
                 <button onclick="limes()">Add</button> 
                 <input type="text" id = "limesInput" min="1">
-                <input type="button" value="+" id="add" onclick="addLime()">
-                <input type="button" value="-" id="remove" onclick="removeLime()"
             </li>
         </ul>
 
@@ -43,7 +41,7 @@
             <li>Tax: 0%</li>
             <li>
                 <button onclick="">Add</button> 
-                <input type="number" min="1">
+                <input type="text" min="1">
             </li>
         </ul>
 
@@ -259,9 +257,8 @@
 
 
         <h1>Basket</h1>
-        <ul id = "basket">
-            <li></li>
+        <ul id = "basket"></ul>
 
-        </ul>
+        <script type = 'text/javascript' src='script.js'></script>
     </body>
 </html>
